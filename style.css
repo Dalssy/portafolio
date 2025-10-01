@@ -1,0 +1,340 @@
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Encabezado */
+header {
+  background: linear-gradient(135deg, #f9c5d1, #9796f0);
+  color: white;
+  padding: 4rem 1rem 2rem;
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.perfil {
+  width: 80px;
+  height: 80px;
+  border-radius: 100%;
+  object-fit: cover;
+  border: 3px solid #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.header-text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+}
+
+.header-text h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.header-text p {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+/* Menú de navegación */
+nav {
+  margin-top: 1.5rem;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: #fbc7d4;
+}
+
+/* Contenedor */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* Sección proyectos */
+.projects {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.projects h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  color: #6a0572;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+  padding-bottom:1rem;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card h3 {
+  margin: 1rem 0 0.5rem;
+  color: #333;
+}
+
+.card p {
+  padding: 0 1rem 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Videos */
+.videos {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.videos h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #6a0572;
+}
+
+.video-wrapper {
+  display: flex;
+  flex-wrap: nowrap; /* para que no baje la playlist */
+  gap: 2rem;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 2rem;
+}
+
+/* Video principal */
+.video-container {
+  position: relative;
+  width: 900px; /* ancho fijo del video principal */
+  padding-bottom: 56.25%;
+  height: 0;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Playlist a la derecha, miniaturas grandes */
+.playlist {
+  max-width: 200px; /* mismo ancho que el video */
+  flex: 0 0 200px;   /* para mantener el tamaño fijo */
+  background: #f9f9f9;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  height: auto;
+  overflow-y: auto;
+}
+
+.playlist ul li a {
+  display: flex;
+  flex-direction: column; /* vertical: miniatura arriba, título debajo */
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+  transition: background 0.3s, color 0.3s;
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+  border-radius: 10px;
+}
+
+.playlist ul li a:hover {
+  background: linear-gradient(135deg, #f9c5d1, #9796f0);
+  color: #fff;
+}
+
+.playlist ul li img {
+  width: 50%;  /* ocupa todo el ancho de la playlist */
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.playlist ul li span {
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+/* Sección de certificados */
+.certificados {
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.certificados h2 {
+  font-size: 2rem;
+  color: #6a0572;
+  margin-bottom: 1rem;
+}
+
+.certificados-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 13rem;
+  justify-items: center;
+}
+
+.cert-card {
+  width: 200%;
+  max-width: 400px;  /* ancho del cuadro */
+  height: 350px;     /* altura del cuadro, ajusta a tu gusto */
+  background: #fff;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.cert-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.cert-card img {
+  width: 99%;
+  height: 95%;
+  object-fit: cover;
+}
+
+/* Sección eventos */
+.eventos {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.eventos h2 {
+  font-size: 2rem;
+  color: #6a0572;
+  margin-bottom: 1rem;
+}
+
+.eventos p {
+  margin-bottom: 2rem;
+  color: #555;
+}
+
+/* Contenedor que acomoda los eventos en paralelo */
+.eventos-grid {
+  display: flex;
+  gap: 2rem;              /* espacio entre eventos */
+  justify-content: center;
+  flex-wrap: wrap;        /* en pantallas pequeñas bajan en otra fila */
+}
+
+/* Cada tarjeta de evento */
+.evento {
+  flex: 1 1 auto;         /* se adapta a su contenido */
+  max-width: 500px;       /* ancho máximo para que no se desborde */
+}
+
+/* Carrusel automático dentro de cada evento */
+.carousel-auto {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.carousel-track {
+  display: flex;
+  width: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-item {
+  min-width: 100%;
+}
+
+.carousel-item img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+}
+
+/* Descripción del evento */
+.evento-descripcion {
+  margin-top: 1.5rem;
+  background: #f9f9f9;
+  padding: 1.5rem;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.evento-descripcion h3 {
+  color: #6a0572;
+  margin-bottom: 0.5rem;
+}
+
+
+
+
+/* Footer */
+footer {
+  background: #f3f3f3;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  color: #555;
+}
